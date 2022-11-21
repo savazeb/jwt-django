@@ -20,3 +20,7 @@ RUN pipenv install --system --clear
 WORKDIR /django-api/app
 
 COPY ./app .
+
+EXPOSE 8000
+
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
